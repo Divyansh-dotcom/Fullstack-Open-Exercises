@@ -1,11 +1,12 @@
 ```mermaid
 sequenceDiagram
+
     participant browser
     participant server
     
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->>browser: request to GET https://studies.cs.helsinki.fi/exampleapp/notes
+    server-->>browser: HTTP redirect to  https://studies.cs.helsinki.fi/exampleapp/notes
     deactivate server
     Note right of browser: The server asks the browser to perform a new HTTP GET request to notes.
 
