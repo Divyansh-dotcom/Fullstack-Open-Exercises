@@ -1,28 +1,28 @@
 ```mermaid
 
 sequenceDiagram
-    participant Browser
-    participant Server
+    participant browser
+    participant server
     
     
-    Browser->>Server: HTTP GET /exampleapp/spa
+    browser-->>server: HTTP GET /exampleapp/spa
     activate server
-    Server-->>Browser: HTML for single-page app
+    server-->>browser: HTML for single-page app
     decativate server
 
 
-    Browser->>Server: HTTP GET /exampleapp/spa.js
+    browser-->>server: HTTP GET /exampleapp/spa.js
     activate server
-    Server-->>Browser: spa.js
+    server-->>browser: spa.js
     deactivate server
 
 
-    Browser->>Server: HTTP GET /exampleapp/main.css
+    browser-->>server: HTTP GET /exampleapp/main.css
 activate server
-    Server-->>Browser: main.css
+    server-->>browser: main.css
 deactivate server
 
-    Browser->>Server: HTTP GET /exampleapp/data.json
+    browser-->>server: HTTP GET /exampleapp/data.json
 activate server
-    Server-->>Browser: data.json (notes data)
+    server-->>browser: data.json (notes data)
 deactivate server
