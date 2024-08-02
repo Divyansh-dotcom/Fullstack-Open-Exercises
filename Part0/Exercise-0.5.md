@@ -8,7 +8,7 @@ sequenceDiagram
     browser-->>server: HTTP GET /exampleapp/spa
     activate server
     server-->>browser: HTML for single-page app
-    decativate server
+    deativate server
 
 
     browser-->>server: HTTP GET /exampleapp/spa.js
